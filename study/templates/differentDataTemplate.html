@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{test_data.title}}</title>
+</head>
+<style>
+    .test1 {
+        color: #f60;
+        text-aline:center;
+    }
+</style>
+<body>
+{% if True%}
+    <h1 class="test1">Hello ~ {{test_data.hero.name}}</h1>
+{% endif %}
+
+
+{% if test_data.lists_data.8 %}
+    <h2>该列表里第8个元素是{{test_data.lists_data.8}}</h2>>
+{% else %}
+    <h2>抱歉，超出列表索引了</h2>
+{% endif %}
+
+
+<!--这里讲url_for在模板中反向解析的用法-->
+{% if test_data.hero.name %}
+    <h2><a href="{{url_for('login')}}">点击登录</a></h2>
+{% endif %}
+
+<h2>------------------------------------------------------------------------------------------------------------</h2>
+<!--获取列表中的第1个元素-->
+<h2>list中第1个元素:{{test_data.lists_data.0}}</h2>
+<!--&lt;!&ndash;获取元组中的第3个元素&ndash;&gt;-->
+<h2>tuple中第3个元素：{{test_data.tuples_data[2]}}</h2>
+<!--获取字典中键为 '无极剑圣' 的值-->
+<h2>dict中键为 '无极剑圣' 的值：{{test_data.dicts_data['无极剑圣']}}</h2>
+<!--获取类对象LOLHero中的 name 属性值-->
+<h2>LOLHero的name属性: {{test_data.hero.name}}</h2>
+<!--调用类对象LOLHero的 say 方法-->
+<h2>LOLHero的 say 方法: {{test_data.hero.say()}}</h2>
+<h2>------------------------------------------------------------------------------------------------------------</h2>
+</body>
+</html>

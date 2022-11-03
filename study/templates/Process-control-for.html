@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if True%}
+    <h1 class="test1">Hello ~ {{test_data.uname}}</h1>
+{% endif %}
+
+<!--模板中使用 for 循环结构-->
+<!--list-->
+<ul>
+{% for li in test_data.random_word %}
+    <li><h2>{{li}}</h2></li>
+{% endfor %}
+</ul>
+
+
+<!--dict-->
+<div>
+{% for k,v in test_data.dicts_data.items() %}
+    <p>{{k}}:{{v}}</p>
+{% endfor %}
+</div>
+
+
+</body>
+</html>

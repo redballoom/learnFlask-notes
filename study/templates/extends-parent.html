@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <header>
+        <h1>父模板中的头部内容</h1>
+        <div>头部阿巴啊阿巴阿巴啊啊啊巴</div>
+    </header>
+    <section>
+<!--        定义在子模版中需要重写的部分-->
+        {% block container %}
+        <h1>父模板中的核心内容</h1>
+        {% endblock %}
+        <div>中间阿巴啊阿巴阿巴啊啊啊巴</div>
+    </section>
+    <footer>
+        <h1>父模板中的底部内容</h1>
+        <div>底部阿巴啊阿巴阿巴啊啊啊巴</div>
+    </footer>
+</body>
+</html>

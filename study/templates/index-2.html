@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{test_data.uname}}</title>
+</head>
+<style>
+    .section {
+    margin: 0 auto;
+	width: 1200px;
+	height: 160px;
+	border: 1px solid #000000;
+    }
+    .box {
+<!--	width: 100px;-->
+        height: 200px;
+        margin: 20px 10px;
+        background: #00FFFF;
+    }
+</style>
+<body>
+<!--引用headers-nav.html的内容到此模板中-->
+
+{% include 'header-nav.html' %}
+<section class="section">
+    <div class="box">
+    <h1>网站简介</h1>
+    <p>C语言中文网创办于 2012 年初，是一个在线学习<b>编程</b>的网站。C语言中文网已经发布了众多优质编程教程，包括C语言、C++、Java、Python 等，它们都通俗易懂，深入浅出。</p>
+    <p>C语言中文网将会持续更新，并且不忘初心，坚持创作优质教程。</p>
+    </div>
+    <div>
+        <img src="" alt="">
+    </div>
+</section>
+</body>
+</html>

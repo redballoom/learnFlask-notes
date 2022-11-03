@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>导航栏菜单的设计与实现</title>
+        <style>
+        .topbar-container{
+            background-color: #222222;
+        }
+        .topbar-wrap{
+            width:1200px;
+            height:60px;
+            margin:0 auto;
+            overflow: hidden;
+        }
+        .logo{
+            height:50px;
+            width: 50px;
+            float: left;
+            margin:5px 5px;
+
+        }
+        .nav{
+            float: left;
+            height: 60px;;
+        }
+        .nav li{
+            float: left;
+            width: 100px;
+            margin:0 10px;
+            list-style: none;
+        }
+        .nav a{
+            text-decoration: none;
+            height: 100%;
+            width: 100%;
+            display: block;
+            font-size: 18px;
+            color: #dadada;
+            text-align: center;
+<!--            line-height: auto;-->
+
+        }
+        .nav a:hover{
+            background: #333;
+        }
+        img{
+            height:50px;
+
+        }
+        </style>
+    </head>
+    <body>
+
+    <div class="topbar-container">
+        <div class="topbar-wrap">
+            <div class="logo">
+                <a href="#"> <img src="https://c2.im5i.com/2022/10/29/XviH3.png" alt="mi"></a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">小米商场</a></li>
+                    <li><a href="#">MIUI</a></li>
+                    <li><a href="#">米聊</a></li>
+                    <li><a href="#">游戏</a></li>
+                    <li><a href="#">多看阅读</a></li>
+                    <li><a href="#">云服务</a></li>
+                    <li><a href="#">金融</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>

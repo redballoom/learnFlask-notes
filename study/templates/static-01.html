@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div {
+    margin: 10px auto;
+	width: 80%;
+	height: auto;
+<!--	border: 1px solid #000000;-->
+    }
+    div img {
+	    width: 1200px;
+        margin: 10px 70px;
+    }
+</style>
+<body>
+<div>
+    <img src="/static/images/ahri.jpg" alt="">
+    <br>
+<!--    直接调用反向解析的地址变量-->
+    <img src="{{test_data.link}}" alt="">
+<!--    反向解析方式二-->
+    <img src="{{url_for('static', filename='images/ahri.jpg')}}" alt="">
+</div>
+</body>
+</html>

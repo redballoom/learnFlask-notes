@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+    .test1 {
+        color: #f60;
+        text-aline:center;
+    }
+</style>
+<body>
+{% if True%}
+    <h1 class="test1">Hello ~ {{test_data.uname}}</h1>
+{% endif %}
+
+
+<!--这里讲url_for在模板中反向解析的用法-->
+{% if test_data.uname %}
+    <h2><a href="{{url_for('login')}}">点击登录</a></h2>
+    <h2><a href="{{url_for('info')}}">关于我</a></h2>
+{% endif %}
+</body>
+</html>

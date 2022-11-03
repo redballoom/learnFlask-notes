@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>欢迎 ~ {{test_data.uname}}</h1>
+<!--声明一个宏 （模板中的方法）-->
+{% macro show(img) %}
+<img src="{{img}}" alt="">
+{% endmacro %}
+<h2>使用宏来显示图片</h2>
+<div>
+    {{show('https://file.koolearn.com/20150126/14222611806481.png')}}
+</div>
+
+<h2>使用宏来改变p标签字体样式</h2>
+{% macro show2(str) %}
+    <p style="color:#f60;">{{str}}</p>
+{% endmacro %}
+
+<div>
+    {% for str in test_data.lists %}
+        {{show2(str)}}
+    {% endfor %}
+</div>
+<!--与python中函数的调用是一样的，调用必须在声明函数后-->
+<p>{{show2(test_data.uname)}}</p>
+
+
+
+<!--引入macro.html-->
+<h2>通过引用macro.html文件来创建图片</h2>
+{% import 'macro.html' as macros %}
+<ul>
+    <li>
+        {% for link in test_data.img_list %}
+        {{macros.img(link)}}
+        {% endfor %}
+    </li>
+</ul>
+</body>
+</html>

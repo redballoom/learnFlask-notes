@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>🎉 欢迎访问首页</h1>
+<p>当前的请求协议scheme：<b>{{params.scheme}}</b></p>
+<p>当前的请求方法method：<b>{{params.method}}</b></p>
+<!--因为当前并没有提交什么数据所有为空-->
+
+<!--伪装一段get请求数据  ?name=js&type=shang-->
+<!--<p>当前的get请求方法args：<b>{{params.get_args['name']}}</b></p>-->
+<!--获取到地址栏上我们伪造的name的值 js -->
+<p>当前的get请求方法args：<b>{{params.get_args['name']}}</b></p>
+<p>当前的post请求方法form：<b>{{params.post_form}}</b></p>
+<p>获取任意请求方法的提交values：<b>{{params.values}}</b></p>
+</body>
+</html>
